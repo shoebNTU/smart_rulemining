@@ -220,6 +220,7 @@ if __name__ == "__main__":
                         support, confidence, lift = process_metrics()
 
                 if st.button("Submit"):
+                        support, confidence, lift = 0.3,0.7,1.2
                         # load data as hdf5
                         # association_rules = pd.read_hdf('models/association_rule.h5')
                         association_rules = pd.read_csv('models/association_rule.csv')
