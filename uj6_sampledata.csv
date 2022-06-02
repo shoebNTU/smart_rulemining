@@ -1,0 +1,38 @@
+WO Number,WO Description,Location Code,ATS,CMD,Problem Code,Cause Code,Remedy Code,Equipment Failure Remarks (KPI),Reported Date,F&D Number
+WO00130129,PV14 DM1 MCM bogie 1 major fault,90141/RSC/PRO/MCM1,Summary Status of Drive Control Unit  - Major Fault,"bogie 2 plausibilty UDC failure, Bogie 2 MCU trigger from DSP/FPGA PrSd fault",DCU,Faulty,Replace,"Replaced New DCU card for DM1 MCM bogie 1 and upload the DCU software. The fault was normalised after replaced the new DCU unit
+Serial number after replaced: New= SE1439AD3, Old=SE1023BQ1.",08/01/2018 09:30:00,-
+WO00154556,PV84 DM2 MCM Bogie 2 internal power failure 6V or +/- 15V.,90843/RSC/PRO/DCU_1,NA,Bogie 2 internal power failure 6V or +/- 15V,DCU,Faulty,Replace,"PV84 DM2 MCM Bogie 2 internal power failure 6V or +/- 15V.
+Replaced new DCU card for DM2 MCM bogie 2 and upload software.
+Serial number after replaced:New= SE1439AD2, Old=SE1023BQ2.",27/07/2018 15:00:00,-
+WO00129444,PV32 DM2 MCM bogie 2 plausibilty UDC failure.,90323/RSC/PRO/VLTSENS_2,Status of individual Motor Control Module (MCM) - Faulty,"bogie 2 plausibilty UDC failure, Bogie 2 MCU trigger from DSP/FPGA PrSd fault",Voltage Sensor,Faulty,Replace,"PV32 DM2 MCM bogie 2 plausibilty UDC failure. (VMD originally from PV65 MCM bogie 2).
+Replaced new VMD for DM2 MCM bogie2 and the fault was normalised.
+Serial number after replaced:
+New: 121212178
+Old: 34565B42",27/07/2018 15:00:00,-
+WO00330208,PV91 Replaced all the MCM Voltage monitoring device (VMD).,90911/RSC/PRO/VLTSENS_1,Summary Status of Drive Control Unit  - Major Fault,"bogie 1: DC link overvoltage trip, bogie 2: DC link overvoltage trip",Voltage Sensor,Faulty,Replace,"PV91Replaced all the MCM Voltage monitoring device (VMD).
+Replaced new VMD for all the MCM DM1 and DM2.
+Serial number after replaced: 
+DM1 MCM1 New:8181400333, Old:14459B03
+DM1 MCM2 New:8181422222, Old:15672A41
+DM2 MCM1 New:8181400045, Old:19782A40
+DM2 MCM2 New:8181408981, Old:13456A94",13/07/2018 10:00:00,-
+WO00122321,PV74 DM1 MCM Bogie 2 plausibility failure Udc.,90741/RSC/PRO/VLTSENS_2,Summary Status of Drive Control Unit  - Major Fault,Bogie 2 plausibility failure Udc,Voltage Sensor,Faulty,Replace,"PV74 DM1 MCM Bogie 2 plausibility failure UDC
+Replaced new VMD for DM1 MCM Bogie 2.
+Serial number after replaced:
+New: 818E434555
+Old: 23234T54",02/07/2018 09:30:00,MCO12062018RSC1
+WO00124443,PV54 DM2 MCM Bogie 2 internal power fail 6V or +/-15V,90543/RSC/PRO/DCU_2,Summary Status of Drive Control Unit  - Minor Fault,Bogie 2 internal power failure 6V or +/- 15V,DCU,Faulty,Replace,"PV54 DM2 MCM Bogie 2 internal power fail 6V or +/-15V
+Replaced new DCU card for DM2 MCM bogie 2 and upload the software.
+Serial number after replaced:
+New: BF545006Y3
+Old: DX1005OBV",30/05/2018 13:30:00,-
+WO00129043,PV45 DM2 MCM Bogie 2 internal power fail 6V or +/-15V,90453/RSC/PRO/DCU_2,Summary Status of Drive Control Unit  - Minor Fault,Bogie 2 internal power failure 6V or +/- 15V,DCU,NFF,Swap,"PV45 DM2 MCM Bogie 2 internal power fail 6V or +/-15V
+Fault normalized. Swapped  DCU with bogie1",24/05/2018 09:00:00,-
+WO00456043,PV30 DM1 MCM Bogie 1 and MCM bogie 2 external fan half speed failure.,90301/RSC/PRO/EXTFAN_1,Summary Status of Drive Control Unit  - Minor Fault,bogie 2 external fan half speed failure,Relay,NFF,Swap,"PV30 DM1 MCM Bogie 1 and MCM bogie 2 external fan half speed failure.
+The Fault was normalised itself.
+Swapped DM1 MCM External Fan full speed relay (.20.5) and auxiliary contact with DM2 MCM external fan full speed relay(.20.5) and auxiliary contact for monitoring.",20/06/2018 13:30:00,-
+WO00154566,PV03 found that DM2 MCM selector switch Q pin and the cable missing.,90033/RSC/PRO/SELSW_1,NA,NA,Selector Switch,Dislodged,Replace,Replaced Q-pin and the cable.,24/05/2018 09:00:00,-
+WO00138929,PV21 DM1 MCM Bogie 1 MCU trigger from DSP/FPGA PrSd fault. DM1 MCM bogie1 OVC phase1 feedback failure,90211/RSC/PRO/GDUSU_1,Summary Status of Drive Control Unit  - Major Fault,"bogie1 OVC phase1 feedback failure, Bogie 2 MCU trigger from DSP/FPGA PrSd fault",GDU,Faulty,Replace,"Replaced DM1 MCM Bogie 1 GDU 6 and reprogramme. The fault was normalized after replaced. Serial number after replaced: New: SP151333SQ, Old: SP151356SQ",24/05/2018 09:00:00,-
+WO00122244,PV54 DM2 Found Line inductor MCM DC-Link capacitor box top cover(x2) missing,90543/RSC/PRO/LI1,NA,NA,Line Inductor,Dislodged,Replace,Cover has been replaced from PV92 DM1,24/05/2018 09:00:00,-
+WO00122367,PV18 DM2 MCM heat sink cover M8 bolt insert found came off.,90183/RSC/BDY/MCM,NA,NA,Heat Sink,Dislodged,Replace,Replaced new Insert,24/05/2018 09:00:00,-
+WO00138561,PV16 DM1 MCM Bogie 2 unknown status.,90161/RSC/PRO/AMPSENS_3,NA,NA,NA,NA,NA,-,24/05/2018 09:00:00,-
