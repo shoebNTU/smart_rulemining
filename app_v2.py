@@ -15,6 +15,7 @@ from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import fpgrowth, apriori, fpmax
 from mlxtend.frequent_patterns import association_rules
 from datetime import datetime
+import base64
 
 import sys
 
@@ -99,6 +100,18 @@ def initSession():
 
 if __name__ == "__main__":
 
+        def get_table_download_link(df):
+                """Generates a link allowing the data in a given panda dataframe to be downloaded
+                in:  dataframe
+                out: href string
+                """
+                csv = df.to_csv(index=False)
+                b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
+                href = f'<a href="data:file/csv;base64,{b64}" download="rules.csv">Download rules as a csv file</a>'
+                return href
+                # href = f'<a href="data:file/csv;base64,{b64}">Download csv file</a>'
+                # return href
+
         st.sidebar.image("./imgs/siemens_logo.png", width = 300)
 
         st.title("Smart Diagnostic System")
@@ -170,14 +183,18 @@ if __name__ == "__main__":
                                 session_state.association_rule['antecedents'] = session_state.association_rule['antecedents'].apply(lambda x: list(x)).astype('unicode')
                                 session_state.association_rule['consequents'] = session_state.association_rule['consequents'].apply(lambda x: list(x)).astype('unicode')
                                 session_state.association_rule.to_csv('models/association_rule.csv', index=False)
-                                session_state.association_rule.to_excel("models/association_rule.xlsx", index=False)  
-                                # save data as hdf5
+                                session_state.association_rule.to_excel("models/association_rule.xlsx", index=False)
+
+                                                                # save data as hdf5
                                 store = pd.HDFStore('models/association_rule.h5')
                                 store.put('sd', session_state.association_rule, format='table', data_columns=True)
                                 store.close()
 
                         else:
                                 st.error("Association rule is not generated")
+                        
+                        st.markdown(get_table_download_link(pd.read_csv('./models/association_rule.csv')), unsafe_allow_html=True)
+ 
 
                 
         #Prediction
