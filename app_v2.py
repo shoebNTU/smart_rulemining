@@ -173,8 +173,8 @@ if __name__ == "__main__":
                 
                 st.subheader("Generate Rules")
 
-                types_of_algos = st.selectbox ("Select Algorithm", ["Apriori", "FPgrowth"], key="algo_types")
-
+                # types_of_algos = st.selectbox ("Select Algorithm", ["Apriori", "FPgrowth"], key="algo_types")
+                types_of_algos = 'FPgrowth'
                 if st.button("Build rules"):
                         if types_of_algos == "Apriori":
                                 session_state.association_rule = runApriori(dataset)
