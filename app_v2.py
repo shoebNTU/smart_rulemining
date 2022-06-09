@@ -16,6 +16,7 @@ from mlxtend.frequent_patterns import fpgrowth, apriori, fpmax
 from mlxtend.frequent_patterns import association_rules
 from datetime import datetime
 import base64
+import re
 
 import sys
 
@@ -228,9 +229,12 @@ if __name__ == "__main__":
                         # load data as hdf5
                         # association_rules = pd.read_hdf('models/association_rule.h5')
                         association_rules = pd.read_csv('models/association_rule.csv')
-                        association_rules = association_rules.reset_index(drop=True)
+                        association_rules = association_rules.reset_index(drop=True)                        
                         
-                        codes_parsed = [pInput.strip().lower()]
+                        for i in "'[]":
+                                pInput = pInput.replace(i,"")                        
+                        pInput = pInput.strip()
+                        codes_parsed = [pInput.lower()]
                         # codes_parsed = [str(s) for s in pInput.split(',')]
                         # codes_parsed = ['Replace', 'NA']
                         st.info('**CMD code**: ' + pInput)
