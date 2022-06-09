@@ -233,7 +233,7 @@ if __name__ == "__main__":
                         codes_parsed = [pInput.strip().lower()]
                         # codes_parsed = [str(s) for s in pInput.split(',')]
                         # codes_parsed = ['Replace', 'NA']
-                        st.info(pInput)
+                        st.info('**CMD code**: ' + pInput)
                         codes = pd.Series([codes_parsed] * len(association_rules), index = association_rules.index)
                         codes = codes.astype(str)
                     
@@ -244,13 +244,15 @@ if __name__ == "__main__":
                                 df = association_rules[(association_rules['consequents'] == codes) & (association_rules['support'] > support) & (association_rules['confidence'] > confidence) & (association_rules['lift'] > lift)]
                                 # df['consequents'] = association_rules['consequents'].apply(lambda x: list(x)).astype('unicode')
                                 # df['antecedents'] = association_rules['antecedents'].apply(lambda x: list(x)).astype('unicode')
-                                st.dataframe(df[['antecedents', 'support', 'confidence', 'lift']])
+                                st.dataframe(df[['antecedents', 'support', 'confidence', 'lift']].reset_index(drop=True))
 
                         elif pType == "consequents":
                                 df = association_rules[ (association_rules['antecedents']== codes) & (association_rules['support'] > support) & (association_rules['confidence'] > confidence) & (association_rules['lift'] > lift)]
                                 # df['consequents'] = association_rules['consequents'].apply(lambda x: list(x)).astype('unicode')
                                 # df['antecedents'] = association_rules['antecedents'].apply(lambda x: list(x)).astype('unicode')
-                                st.dataframe(df[['consequents', 'support', 'confidence', 'lift']])
+                                df_to_display = df.copy()
+                                df_to_display.rename(columns={'consequents':'PCR Codes'},inplace=True)
+                                st.table(df_to_display[['PCR Codes', 'support', 'confidence', 'lift']].reset_index(drop=True))
 
 
         st.sidebar.markdown("#### **Copyright &copy; 2022 DA REAMS, Siemens Mobility**")
