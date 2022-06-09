@@ -252,8 +252,11 @@ if __name__ == "__main__":
                                 # df['antecedents'] = association_rules['antecedents'].apply(lambda x: list(x)).astype('unicode')
                                 df_to_display = df.copy()
                                 df_to_display.rename(columns={'consequents':'PCR Codes'},inplace=True)
-                                st.table(df_to_display[['PCR Codes', 'support', 'confidence', 'lift']].reset_index(drop=True))
-
+                                if len(df_to_display):  
+                                        st.table(df_to_display[['PCR Codes', 'support', 'confidence', 'lift']].reset_index(drop=True))
+                                else:
+                                        st.warning(f'No associated PCR code found for support = \
+                                                {support}, confidence = {confidence}, lift = {lift}')
 
         st.sidebar.markdown("#### **Copyright &copy; 2022 DA REAMS, Siemens Mobility**")
         # st.sidebar.info(
