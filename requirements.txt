@@ -5,3 +5,4 @@ pandas
 xlrd
 openpyxl
 tables
+streamlit==0.64.0
