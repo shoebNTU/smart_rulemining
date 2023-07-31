@@ -2,7 +2,6 @@ matplotlib
 mlxtend
 numpy
 pandas
-streamlit
 xlrd
 openpyxl
 tables
