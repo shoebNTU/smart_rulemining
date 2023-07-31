@@ -1,8 +1,8 @@
-matplotlib==3.5.1
-mlxtend==0.20.0
+matplotlib
+mlxtend
 numpy
 pandas
 streamlit
-xlrd==2.0.1
-openpyxl==3.0.7
+xlrd
+openpyxl
 tables
